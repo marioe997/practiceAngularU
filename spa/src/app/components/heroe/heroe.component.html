@@ -1,0 +1,35 @@
+<h1 class="animated fadeIn fast">{{heroe.nombre | uppercase}}  <small>({{heroe.aparicion | date: 'y'}})</small></h1>
+<hr>
+
+<div class="row animated fadeIn">
+
+    <div class="col-md-4">
+
+        <div class="row row-cols-1 row-cols-md-1 g-4">
+            <div class="col">
+                <div class="card bg-secondary p-2" style="--bs-bg-opacity: .2;">
+                    <img [src]="heroe.img" [alt]="heroe.name" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+        <div class="d-grid gap-2">
+            <a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div>
+            <img class="marvelLogo" *ngIf="heroe.casa === 'Marvel'" src="assets/img/marvel.png" [alt]="heroe.casa">
+            <img class="dcLogo" *ngIf="heroe.casa === 'DC'" src="assets/img/dc.png" [alt]="heroe.casa">
+        </div>
+    </div>
+</div>

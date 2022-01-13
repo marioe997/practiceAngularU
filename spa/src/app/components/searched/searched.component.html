@@ -1,0 +1,13 @@
+<h1 class="animated fadeIn fast">Buscando: <small>{{termino}}</small></h1>
+<hr>
+
+<div class="alert alert-danger animated fadeIn" role="alert" *ngIf="heroe.length == 0">
+    No existen resultados con el termino {{ termino }}
+  </div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 ">
+    <app-heroe-tarjeta [hero]="hero" [index]="hero.idx" *ngFor="let hero of heroe"></app-heroe-tarjeta>
+
+
+</div>
